@@ -17,9 +17,11 @@ StaticLinkedList* InitializeSLinkList(size_t capacity){
 
 size_t Malloc_SLL(StaticLinkedList* list) {
     size_t i = list->_arr[0]._next;
-    if (i)
+    if (list->_capacity-list->_size != 2) {
         list->_arr[0]._next = list->_arr[i]._next;
-    return i;
+        return i;
+    }
+    return 0;
 }
 
 bool InsertSLinkList(StaticLinkedList* list, size_t pos, SLL_DataType value){

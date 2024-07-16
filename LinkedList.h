@@ -3,7 +3,7 @@
 #include<malloc.h>
 #include<stdbool.h>
 
-typedef int LinkL_DataType;
+typedef long long int LinkL_DataType;
 
 typedef struct Node {
 	LinkL_DataType _data;

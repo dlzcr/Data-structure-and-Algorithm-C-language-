@@ -2,28 +2,33 @@
 #include"SequenceList.h"
 #include"LinkedList.h"
 #include"StaticLinkedList.h"
+#include <assert.h>
 
-void print(SqL_DataType* const element) {
-	printf("%d ", *element);
+void print(long long int* const element) {
+	printf("%lld ", *element);
 }
 
-bool equal(const SqL_DataType a, const SqL_DataType b) {
+bool equal(const long long int a, const long long int b) {
 	return a == b;
 }
 
+//À≥–Ú±Ì≤‚ ‘
 void SqListTest() {
-	SequenceList* list = InitializeSqList(10);
+	SequenceList* list = InitializeSqList(3);
 	for(size_t i = 0;i < 10;++i)
 		InsertSqList(list, i, i);
+	InsertSqList(list,8,999);
 	for (size_t i = 0; i < SizeSqList(list); ++i)
-		printf("%d ", *AtSqList(list,i));
+		printf("%lld ", *AtSqList(list, i));
 	puts("");
 	for (size_t i = 0; i < 5; ++i)
-		EraseSqList(list, i);
+		EraseSqList(list, 3);
 	ForeachSqList(list, print);
 	puts("");
-	printf("%lld",FindSqList(list, 7, equal));
+	printf("%lld", FindSqList(list, 999, equal));
+	puts("");
 	ClearSqList(list);
+	ForeachSqList(list, print);
 	FreeSqList(list);
 }
 
@@ -44,20 +49,25 @@ void LinkListTest() {
 }
 
 void StaticLinkedListTest() {
-	StaticLinkedList* list = InitializeSLinkList(256);
+	StaticLinkedList* list = InitializeSLinkList(20);
 	for (size_t i = 0; i < 10; ++i)
 		InsertSLinkList(list, i, i);
 	InsertSLinkList(list, 3, 999);
-	for (size_t i = 0; i < 11; ++i)
-		printf("%d ", *AtSLinkList(list, i));
+	for (size_t i = 0; i < SizeSLinkList(list); ++i)
+		printf("%lld ", *AtSLinkList(list, i));
 	puts("");
-	for (size_t i = 0; i < SizeSLinkList(list); ++i)
-		EraseSLinkList(list, 1);
-	for (size_t i = 0; i < SizeSLinkList(list); ++i)
-		printf("%d ", *AtSLinkList(list, i));
+	for (size_t i = 0; i < 2; ++i)
+		EraseSLinkList(list, 4);
+	ForeachSLinkList(list, print);
+	InsertSLinkList(list, 5, 999);
+	puts("");
+	ForeachSLinkList(list, print);
+	puts("");
+	printf("%lld", FindSLinkList(list, 6, equal));
+	FreeSLinkList(list);
 }
 
 int main(void) {
-	StaticLinkedListTest();
+	SqListTest();
 	return 0;
 }

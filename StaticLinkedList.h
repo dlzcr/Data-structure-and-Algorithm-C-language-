@@ -2,7 +2,7 @@
 #include<stddef.h>
 #include<stdbool.h>
 
-typedef int SLL_DataType;
+typedef long long int SLL_DataType;
 
 typedef struct{
 	SLL_DataType _data;

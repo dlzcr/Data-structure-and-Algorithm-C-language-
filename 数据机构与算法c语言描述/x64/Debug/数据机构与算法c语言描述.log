@@ -1,45 +1,36 @@
-﻿  StaticLinkedList.c
-  main.c
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.h(8,15): warning C4820: "<unnamed-tag>": 数据成员 "<unnamed-tag>::_data" 后添加了 "4" 字节填充
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\LinkedList.h(9,17): warning C4820: "Node": 数据成员 "Node::_data" 后添加了 "4" 字节填充
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.h(8,15): warning C4820: "<unnamed-tag>": 数据成员 "<unnamed-tag>::_data" 后添加了 "4" 字节填充
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(17,25): warning C4267: “参数”: 从“size_t”转换到“SqL_DataType”，可能丢失数据
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(17,25): warning C4365: “参数”: 从“size_t”转换到“SqL_DataType”，有符号/无符号不匹配
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(25,9): warning C4777: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 1 拥有了类型“size_t”
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(33,27): warning C4267: “参数”: 从“size_t”转换到“LinkL_DataType”，可能丢失数据
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(33,27): warning C4365: “参数”: 从“size_t”转换到“LinkL_DataType”，有符号/无符号不匹配
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(41,9): warning C4777: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 1 拥有了类型“size_t”
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(49,28): warning C4267: “参数”: 从“size_t”转换到“SLL_DataType”，可能丢失数据
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(49,28): warning C4365: “参数”: 从“size_t”转换到“SLL_DataType”，有符号/无符号不匹配
-  正在生成代码...
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(16,1): warning C4715: “InitializeSLinkList”: 不是所有的控件路径都返回值
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(66,1): warning C4715: “EraseSLinkList”: 不是所有的控件路径都返回值
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(38,1): warning C4715: “InsertSLinkList”: 不是所有的控件路径都返回值
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(57): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(56) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(57) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(22): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(21) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(22) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(55): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(54) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(55) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(19): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(18) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(19) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(52): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(51) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(52) : 注意: 此行上的源调用
+﻿  main.c
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(19,25): warning C4365: “参数”: 从“size_t”转换到“SqL_DataType”，有符号/无符号不匹配
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(28,9): warning C4777: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 1 拥有了类型“size_t”
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(38,27): warning C4365: “参数”: 从“size_t”转换到“LinkL_DataType”，有符号/无符号不匹配
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(40,10): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“LinkL_DataType”
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(46,9): warning C4777: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 1 拥有了类型“size_t”
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(54,28): warning C4365: “参数”: 从“size_t”转换到“SLL_DataType”，有符号/无符号不匹配
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(66,9): warning C4777: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 1 拥有了类型“size_t”
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(43): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(42) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(43) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(40): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(39) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(40) : 注意: 此行上的源调用
 C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(38): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
   C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(37) : 注意: 在此行上通过对比检查索引 "i" 范围
   C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(38) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(35): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(34) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(35) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(87): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(85) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(87) : 注意: 此行上的源调用
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(13): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(12) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(13) : 注意: 此行上的源内存负载
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(60): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(59) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(60) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(57): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(56) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(57) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(54): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(53) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(54) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(25): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(24) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(25) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(22): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(21) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(22) : 注意: 此行上的源调用
+C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(19): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(18) : 注意: 在此行上通过对比检查索引 "i" 范围
+  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\main.c(19) : 注意: 此行上的源调用
   数据机构与算法c语言描述.vcxproj -> C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\x64\Debug\数据机构与算法c语言描述.exe
