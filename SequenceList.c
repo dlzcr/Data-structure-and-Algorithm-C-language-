@@ -1,6 +1,6 @@
 #include"SequenceList.h"
 #include <stdint.h>
-//Ë³Ðò±í³õÊ¼»¯
+//é¡ºåºè¡¨åˆå§‹åŒ–
 SequenceList* InitializeSqList(size_t capacity) {
 	SequenceList* newList = (SequenceList*)malloc(sizeof(SequenceList));
 	if (!newList)
@@ -14,7 +14,7 @@ SequenceList* InitializeSqList(size_t capacity) {
 	}
 	return newList;
 }
-//Ë³Ðò±í²åÈëÔªËØ
+//é¡ºåºè¡¨æ’å…¥å…ƒç´ 
 bool InsertSqList(SequenceList* list, size_t pos, SqL_DataType value) {
 	if (!list || pos > list->_size)
 		return false;
@@ -28,7 +28,7 @@ bool InsertSqList(SequenceList* list, size_t pos, SqL_DataType value) {
 	++list->_size;
 	return true;
 }
-//Ë³Ðò±íÉ¾³ýÔªËØ
+//é¡ºåºè¡¨åˆ é™¤å…ƒç´ 
 bool EraseSqList(SequenceList* list, size_t pos) {
 	if (!list || pos >= list->_size)
 		return false;
@@ -37,7 +37,7 @@ bool EraseSqList(SequenceList* list, size_t pos) {
 	--list->_size;
 	return true;
 }
-//Ë³Ðò±í²éÕÒÔªËØ
+//é¡ºåºè¡¨æŸ¥æ‰¾å…ƒç´ 
 size_t FindSqList(const SequenceList* list, SqL_DataType value, bool(* equal)( SqL_DataType,  SqL_DataType)) {
 	if (!list)
 		return SIZE_MAX;
@@ -46,7 +46,7 @@ size_t FindSqList(const SequenceList* list, SqL_DataType value, bool(* equal)( S
 			return i;
 	return list->_size;
 }
-//Ë³Ðò±í±éÀúÔªËØ
+//é¡ºåºè¡¨éåŽ†å…ƒç´ 
 bool ForeachSqList(const SequenceList*  list, void(* foreach)(SqL_DataType* element)) {
 	if (!list || !foreach)
 		return false;
@@ -54,7 +54,7 @@ bool ForeachSqList(const SequenceList*  list, void(* foreach)(SqL_DataType* elem
 		foreach(list->_data + i);
 	return true;
 }
-//Ë³Ðò±íÊÍ·ÅÄÚ´æ
+//é¡ºåºè¡¨é‡Šæ”¾å†…å­˜
 bool FreeSqList(SequenceList* list) {
 	if (!list || !list->_data)
 		return false;
