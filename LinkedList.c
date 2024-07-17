@@ -2,6 +2,7 @@
 #include <malloc.h>
 #include <stdint.h>
 
+//链表初始化
 LinkedList* InitializeLinkList(){
 	LinkedList* list = (LinkedList*)malloc(sizeof(LinkedList));
 	if (!list)
@@ -10,6 +11,7 @@ LinkedList* InitializeLinkList(){
 	return list;
 }
 
+//链表获取大小
 size_t SizeLinkList(const LinkedList* list){
 	if (!list)
 		return 0;
@@ -19,6 +21,7 @@ size_t SizeLinkList(const LinkedList* list){
 	return count;
 }
 
+//链表操作元素
 LinkL_DataType* AtLinkList(const LinkedList* list, size_t pos){
 	if (!list)
 		return NULL;
@@ -30,6 +33,7 @@ LinkL_DataType* AtLinkList(const LinkedList* list, size_t pos){
 	return &index->_data;
 }
 
+//链表插入元素
 bool InsertLinkList(LinkedList* list, size_t pos, LinkL_DataType value){
 	if (!list)
 		return false;
@@ -47,6 +51,7 @@ bool InsertLinkList(LinkedList* list, size_t pos, LinkL_DataType value){
 	return true;
 }
 
+//链表删除元素
 bool EraseLinkList(LinkedList* list, size_t pos){
 	if (!list)
 		return false;
@@ -61,6 +66,7 @@ bool EraseLinkList(LinkedList* list, size_t pos){
 	return false;
 }
 
+//链表查找元素
 size_t FindLinkList(const LinkedList* list, LinkL_DataType value, bool(*equal)(LinkL_DataType, LinkL_DataType)){
 	if (!list)
 		return SIZE_MAX;
@@ -72,6 +78,7 @@ size_t FindLinkList(const LinkedList* list, LinkL_DataType value, bool(*equal)(L
 	return i;
 }
 
+//链表遍历元素
 bool ForeachLinkList(const LinkedList* list, void(*foreach)(LinkL_DataType*)){
 	if (!list)
 		return false;
@@ -80,12 +87,14 @@ bool ForeachLinkList(const LinkedList* list, void(*foreach)(LinkL_DataType*)){
 	return true;
 }
 
+//链表清空元素
 bool ClearLinkList(LinkedList* list){
 	bool state = FreeLinkList(list->_next);
 	list->_next = NULL;
 	return state;
 }
 
+//链表释放内存
 bool FreeLinkList(LinkedList* list){
 	if (!list)
 		return false;
