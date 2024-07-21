@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 //静态链表初始化
-StaticLinkedList* InitializeSLinkList(size_t capacity) {
+StaticLinkedList* InitializeSSLList(size_t capacity) {
 	//创建静态链表
 	StaticLinkedList* newList = (StaticLinkedList*)malloc(sizeof(StaticLinkedList));
 	if (!newList)
@@ -22,7 +22,7 @@ StaticLinkedList* InitializeSLinkList(size_t capacity) {
 	return newList;
 }
 //静态链表获取大小
-size_t SizeSLinkList(const StaticLinkedList* list) {
+size_t SizeSSLList(const StaticLinkedList* list) {
 	//判断空指针
 	if (!list)
 		return 0;
@@ -34,7 +34,7 @@ size_t SizeSLinkList(const StaticLinkedList* list) {
 	return count;
 }
 //静态链表操作元素
-SLL_DataType* AtSLinkList(const StaticLinkedList* list, size_t pos) {
+SSLL_DataType* AtSSLList(const StaticLinkedList* list, size_t pos) {
 	//判断空指针
 	if (!list)
 		return NULL;
@@ -59,7 +59,7 @@ size_t malloc_SLL(StaticLinkedList* list) {
 	return newIndex;
 }
 //静态链表插入元素
-bool InsertSLinkList(StaticLinkedList* list, size_t pos, SLL_DataType value) {
+bool InsertSSLList(StaticLinkedList* list, size_t pos, SSLL_DataType value) {
 	//判断空指针
 	if (!list)
 		return false;
@@ -84,7 +84,7 @@ void free_SLL(StaticLinkedList* list, size_t pos) {
 	list->_arr[0]._next = pos;
 }
 //静态链表删除
-bool EraseSLinkList(StaticLinkedList* list, size_t pos) {
+bool EraseSSLList(StaticLinkedList* list, size_t pos) {
 	//判断空指针
 	if (!list)
 		return false;
@@ -102,7 +102,7 @@ bool EraseSLinkList(StaticLinkedList* list, size_t pos) {
 	return true;
 }
 //静态链表查找元素
-size_t FindSLinkList(const StaticLinkedList* list, SLL_DataType value, bool(*equal)(SLL_DataType, SLL_DataType)) {
+size_t FindSSLList(const StaticLinkedList* list, SSLL_DataType value, bool(*equal)(SSLL_DataType, SSLL_DataType)) {
 	//判断空指针
 	if (!list)
 		return SIZE_MAX;
@@ -113,7 +113,7 @@ size_t FindSLinkList(const StaticLinkedList* list, SLL_DataType value, bool(*equ
 	return i;
 }
 //静态链表遍历元素
-bool ForeachSLinkList(const StaticLinkedList* list, void(*foreach)(SLL_DataType*)) {
+bool ForeachSSLList(const StaticLinkedList* list, void(*foreach)(SSLL_DataType*)) {
 	//判断空指针
 	if (!list)
 		return false;
@@ -122,7 +122,7 @@ bool ForeachSLinkList(const StaticLinkedList* list, void(*foreach)(SLL_DataType*
 	return true;
 }
 //静态链表清空元素
-bool ClearSLinkList(StaticLinkedList* list) {
+bool ClearSSLList(StaticLinkedList* list) {
 	if (!list)
 		return false;
 	for (size_t i = 0; i < list->_capacity - 1; ++i)
@@ -131,7 +131,7 @@ bool ClearSLinkList(StaticLinkedList* list) {
 	return true;
 }
 //静态链表释放内存
-bool FreeSLinkList(StaticLinkedList* list) {
+bool FreeSSLList(StaticLinkedList* list) {
 	if (!list || !list->_arr)
 		return false;
 	free(list->_arr);

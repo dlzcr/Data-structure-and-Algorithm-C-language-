@@ -130,13 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LinkedList.c" />
+    <ClCompile Include="algorithm.c" />
+    <ClCompile Include="CircularLinkedList.c" />
+    <ClCompile Include="SinglyLinkedList.c" />
     <ClCompile Include="SequenceList.c" />
     <ClCompile Include="StaticLinkedList.c" />
+    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="StaticLinkedList.h">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
     </ClInclude>
-    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="SinglyLinkedList.h" />
     <ClCompile Include="main.c" />
     <ClInclude Include="SequenceList.h" />
   </ItemGroup>

@@ -1,8 +1,29 @@
 #include<stdio.h>
 #include"SequenceList.h"
-#include"LinkedList.h"
+#include"SinglyLinkedList.h"
 #include"StaticLinkedList.h"
-#include <assert.h>
+#include"CircularLinkedList.h"
+#include"algorithm.h"
+
+//顺序表测试
+void SListTest();
+//链表测试
+void SLListTest();
+//静态链表测试
+void SSLListTest();
+//算法测试
+void algorithmTest();
+//循环链表测试
+void CLListTest();
+
+int main(void) {
+	SListTest();
+	SLListTest();
+	SSLListTest();
+	algorithmTest();
+	CLListTest();
+	return 0;
+}
 
 void print(long long int* const element) {
 	printf("%lld ", *element);
@@ -13,137 +34,188 @@ bool equal(const long long int a, const long long int b) {
 }
 
 //顺序表测试
-void SqListTest() {
+void SListTest() {
 	//初始化
-	SequenceList* list = InitializeSqList(3);
-	//插入0到9
-	for(size_t i = 0;i < 10;++i)
-		InsertSqList(list, i, i);
-	//第8号位置插入999
-	InsertSqList(list,8,999);
-	//打印所有元素
-	for (size_t i = 0; i < SizeSqList(list); ++i)
-		printf("%lld ", *AtSqList(list, i));
-	puts("");
-	//删除第3个位置开始的5个元素
-	for (size_t i = 0; i < 5; ++i)
-		EraseSqList(list, 3);
-	//遍历打印元素
-	ForeachSqList(list, print);
-	puts("");
-	//查找值为999元素
-	printf("%lld", FindSqList(list, 999, equal));
-	puts("");
-	//非法位置操作
-	printf("%d\n", InsertSqList(list, SizeSqList(list) + 1, 999));
-	printf("%d\n", InsertSqList(list, -1, 999));
-	printf("%d\n", EraseSqList(list, SizeSqList(list)));
-	printf("%d\n", EraseSqList(list, -1));
-	printf("%lld\n", FindSqList(list,7,equal));
-	printf("%p\n", AtSqList(list, SizeSqList(list)));
-	printf("%p\n", AtSqList(list, -1));
-	printf("%d\n", InsertSqList(NULL,0,0));
-	printf("%d\n", EraseSqList(NULL,0));
-	printf("%lld\n", FindSqList(NULL,0,NULL));
-	printf("%p\n", AtSqList(NULL,0));
-	ForeachSqList(list, print);
-	puts("");
-	//清空元素
-	ClearSqList(list);
-	ForeachSqList(list, print);
-	puts("");
-	//释放内存
-	FreeSqList(list);
-}
-
-void LinkListTest() {
-	//初始化
-	LinkedList* list = InitializeLinkList();
+	SequenceList* list = InitializeSList(3);
 	//插入0到9
 	for (size_t i = 0; i < 10; ++i)
-		InsertLinkList(list, i, i);
+		InsertSList(list, i, i);
 	//第8号位置插入999
-	InsertLinkList(list, 8, 999);
+	InsertSList(list, 8, 999);
 	//打印所有元素
-	for (size_t i = 0; i < SizeLinkList(list); ++i)
-		printf("%lld ", *AtLinkList(list, i));
+	for (size_t i = 0; i < SizeSList(list); ++i)
+		printf("%lld ", *AtSList(list, i));
 	puts("");
 	//删除第3个位置开始的5个元素
 	for (size_t i = 0; i < 5; ++i)
-		EraseLinkList(list, 3);
+		EraseSList(list, 3);
 	//遍历打印元素
-	ForeachLinkList(list, print);
+	ForeachSList(list, print);
 	puts("");
 	//查找值为999元素
-	printf("%lld", FindLinkList(list, 999, equal));
+	printf("%lld", FindSList(list, 999, equal));
 	puts("");
 	//非法位置操作
-	printf("%d\n", InsertLinkList(list, SizeLinkList(list) + 1, 999));
-	printf("%d\n", InsertLinkList(list, -1, 999));
-	printf("%d\n", EraseLinkList(list, SizeLinkList(list)));
-	printf("%d\n", EraseLinkList(list, -1));
-	printf("%lld\n", FindLinkList(list, 7, equal));
-	printf("%p\n", AtLinkList(list, SizeLinkList(list)));
-	printf("%p\n", AtLinkList(list, -1));
-	printf("%d\n", InsertLinkList(NULL, 0, 0));
-	printf("%d\n", EraseLinkList(NULL, 0));
-	printf("%lld\n", FindLinkList(NULL, 0, NULL));
-	printf("%p\n", AtLinkList(NULL, 0));
-	ForeachLinkList(list, print);
+	printf("%d\n", InsertSList(list, SizeSList(list) + 1, 999));
+	printf("%d\n", InsertSList(list, -1, 999));
+	printf("%d\n", EraseSList(list, SizeSList(list)));
+	printf("%d\n", EraseSList(list, -1));
+	printf("%lld\n", FindSList(list, 7, equal));
+	printf("%p\n", AtSList(list, SizeSList(list)));
+	printf("%p\n", AtSList(list, -1));
+	printf("%d\n", InsertSList(NULL, 0, 0));
+	printf("%d\n", EraseSList(NULL, 0));
+	printf("%lld\n", FindSList(NULL, 0, NULL));
+	printf("%p\n", AtSList(NULL, 0));
+	ForeachSList(list, print);
 	puts("");
 	//清空元素
-	ClearLinkList(list);
-	ForeachLinkList(list, print);
+	ClearSList(list);
+	ForeachSList(list, print);
 	puts("");
 	//释放内存
-	FreeLinkList(list);
+	FreeSList(list);
 }
 
-void StaticLinkedListTest() {
+//链表测试
+void SLListTest() {
 	//初始化
-	StaticLinkedList* list = InitializeSLinkList(30);
+	SinglyLinkedList* list = InitializeSLList();
 	//插入0到9
 	for (size_t i = 0; i < 10; ++i)
-		InsertSLinkList(list, i, i);
+		InsertSLList(list, i, i);
 	//第8号位置插入999
-	InsertSLinkList(list, 8, 999);
+	InsertSLList(list, 8, 999);
 	//打印所有元素
-	for (size_t i = 0; i < SizeSLinkList(list); ++i)
-		printf("%lld ", *AtSLinkList(list, i));
+	for (size_t i = 0; i < SizeSLList(list); ++i)
+		printf("%lld ", *AtSLList(list, i));
 	puts("");
 	//删除第3个位置开始的5个元素
 	for (size_t i = 0; i < 5; ++i)
-		EraseSLinkList(list, 3);
+		EraseSLList(list, 3);
 	//遍历打印元素
-	ForeachSLinkList(list, print);
+	ForeachSLList(list, print);
 	puts("");
 	//查找值为999元素
-	printf("%lld", FindSLinkList(list, 999, equal));
+	printf("%lld", FindSLList(list, 999, equal));
 	puts("");
 	//非法位置操作
-	printf("%d\n", InsertSLinkList(list, SizeSLinkList(list) + 1, 999));
-	printf("%d\n", InsertSLinkList(list, -1, 999));
-	printf("%d\n", EraseSLinkList(list, SizeSLinkList(list)));
-	printf("%d\n", EraseSLinkList(list, -1));
-	printf("%lld\n", FindSLinkList(list, 7, equal));
-	printf("%p\n", AtSLinkList(list, SizeSLinkList(list)));
-	printf("%p\n", AtSLinkList(list, -1));
-	printf("%d\n", InsertSLinkList(NULL, 0, 0));
-	printf("%d\n", EraseSLinkList(NULL, 0));
-	printf("%lld\n", FindSLinkList(NULL, 0, NULL));
-	printf("%p\n", AtSLinkList(NULL, 0));
-	ForeachSLinkList(list, print);
+	printf("%d\n", InsertSLList(list, SizeSLList(list) + 1, 999));
+	printf("%d\n", InsertSLList(list, -1, 999));
+	printf("%d\n", EraseSLList(list, SizeSLList(list)));
+	printf("%d\n", EraseSLList(list, -1));
+	printf("%lld\n", FindSLList(list, 7, equal));
+	printf("%p\n", AtSLList(list, SizeSLList(list)));
+	printf("%p\n", AtSLList(list, -1));
+	printf("%d\n", InsertSLList(NULL, 0, 0));
+	printf("%d\n", EraseSLList(NULL, 0));
+	printf("%lld\n", FindSLList(NULL, 0, NULL));
+	printf("%p\n", AtSLList(NULL, 0));
+	ForeachSLList(list, print);
 	puts("");
 	//清空元素
-	ClearSLinkList(list);
-	ForeachSLinkList(list, print);
+	ClearSLList(list);
+	ForeachSLList(list, print);
 	puts("");
 	//释放内存
-	FreeSLinkList(list);
+	FreeSLList(list);
 }
 
-int main(void) {
-	SqListTest();
-	StaticLinkedListTest();
-	return 0;
+//静态链表测试
+void SSLListTest() {
+	//初始化
+	StaticLinkedList* list = InitializeSSLList(30);
+	//插入0到9
+	for (size_t i = 0; i < 10; ++i)
+		InsertSSLList(list, i, i);
+	//第8号位置插入999
+	InsertSSLList(list, 8, 999);
+	//打印所有元素
+	for (size_t i = 0; i < SizeSSLList(list); ++i)
+		printf("%lld ", *AtSSLList(list, i));
+	puts("");
+	//删除第3个位置开始的5个元素
+	for (size_t i = 0; i < 5; ++i)
+		EraseSSLList(list, 3);
+	//遍历打印元素
+	ForeachSSLList(list, print);
+	puts("");
+	//查找值为999元素
+	printf("%lld", FindSSLList(list, 999, equal));
+	puts("");
+	//非法位置操作
+	printf("%d\n", InsertSSLList(list, SizeSSLList(list) + 1, 999));
+	printf("%d\n", InsertSSLList(list, -1, 999));
+	printf("%d\n", EraseSSLList(list, SizeSSLList(list)));
+	printf("%d\n", EraseSSLList(list, -1));
+	printf("%lld\n", FindSSLList(list, 7, equal));
+	printf("%p\n", AtSSLList(list, SizeSSLList(list)));
+	printf("%p\n", AtSSLList(list, -1));
+	printf("%d\n", InsertSSLList(NULL, 0, 0));
+	printf("%d\n", EraseSSLList(NULL, 0));
+	printf("%lld\n", FindSSLList(NULL, 0, NULL));
+	printf("%p\n", AtSSLList(NULL, 0));
+	ForeachSSLList(list, print);
+	puts("");
+	//清空元素
+	ClearSSLList(list);
+	ForeachSSLList(list, print);
+	puts("");
+	//释放内存
+	FreeSSLList(list);
+}
+
+void algorithmTest(){
+	//MidSLList测试
+	SinglyLinkedList* list = InitializeSLList();
+	for (size_t i = 0; i < 11; ++i)
+		InsertSLList(list, i, i);
+	ForeachSLList(list, print);
+	puts("");
+	printf("%lld",*MidSLList(list));
+	puts("\n");
+}
+
+void CLListTest()
+{
+	//初始化
+	CircularLinkedList* list = InitializeCLList();
+	//插入0到9
+	for (size_t i = 0; i < 10; ++i)
+		InsertCLList(list, i, i);
+	//第8号位置插入999
+	InsertCLList(list, 8, 999);
+	//打印所有元素
+	for (size_t i = 0; i < SizeCLList(list); ++i)
+		printf("%lld ", *AtCLList(list, i));
+	puts("");
+	//删除第3个位置开始的5个元素
+	for (size_t i = 0; i < 5; ++i)
+		EraseCLList(list, 3);
+	//遍历打印元素
+	ForeachCLList(list, print);
+	puts("");
+	//查找值为999元素
+	printf("%lld", FindCLList(list, 999, equal));
+	puts("");
+	//非法位置操作
+	printf("%d\n", InsertCLList(list, SizeCLList(list) + 1, 999));
+	printf("%d\n", InsertCLList(list, -1, 999));
+	printf("%d\n", EraseCLList(list, SizeCLList(list)));
+	printf("%d\n", EraseCLList(list, -1));
+	printf("%lld\n", FindCLList(list, 7, equal));
+	printf("%p\n", AtCLList(list, SizeCLList(list)));
+	printf("%p\n", AtCLList(list, -1));
+	printf("%d\n", InsertCLList(NULL, 0, 0));
+	printf("%d\n", EraseCLList(NULL, 0));
+	printf("%lld\n", FindCLList(NULL, 0, NULL));
+	printf("%p\n", AtCLList(NULL, 0));
+	ForeachCLList(list, print);
+	puts("");
+	//清空元素
+	ClearCLList(list);
+	ForeachCLList(list, print);
+	puts("");
+	//释放内存
+	FreeCLList(list);
 }

@@ -21,10 +21,16 @@
     <ClCompile Include="SequenceList.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.c">
+    <ClCompile Include="SinglyLinkedList.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="StaticLinkedList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularLinkedList.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +38,16 @@
     <ClInclude Include="SequenceList.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
+    <ClInclude Include="SinglyLinkedList.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="StaticLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularLinkedList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

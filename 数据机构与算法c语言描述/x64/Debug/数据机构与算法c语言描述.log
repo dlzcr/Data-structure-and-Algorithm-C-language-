@@ -1,5 +1,2 @@
-﻿  StaticLinkedList.c
-C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(19): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(18) : 注意: 在此行上通过对比检查索引 "i" 范围
-  C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\StaticLinkedList.c(19) : 注意: 此行上的源内存负载
+﻿  CircularLinkedList.c
   数据机构与算法c语言描述.vcxproj -> C:\Users\LENOVO\OneDrive\数据机构与算法c语言描述\x64\Debug\数据机构与算法c语言描述.exe
