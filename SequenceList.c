@@ -1,5 +1,7 @@
 ﻿#include"SequenceList.h"
 #include <stdint.h>
+#include <malloc.h>
+#include<stdbool.h>
 //顺序表初始化
 SequenceList* InitializeSList(size_t capacity) {
 	SequenceList* newList = (SequenceList*)malloc(sizeof(SequenceList));

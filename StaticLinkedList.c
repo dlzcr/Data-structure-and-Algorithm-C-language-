@@ -1,6 +1,7 @@
-#include "StaticLinkedList.h"
 #include <malloc.h>
 #include <stdint.h>
+#include <stdbool.h>
+#include "StaticLinkedList.h"
 
 //æ≤Ã¨¡¥±Ì≥ı ºªØ
 StaticLinkedList* InitializeSSLList(size_t capacity) {

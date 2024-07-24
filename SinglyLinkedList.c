@@ -1,6 +1,7 @@
-#include "SinglyLinkedList.h"
 #include <malloc.h>
 #include <stdint.h>
+#include<stdbool.h>
+#include "SinglyLinkedList.h"
 
 //¡¥±Ì≥ı ºªØ
 SinglyLinkedList* InitializeSLList(){

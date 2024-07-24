@@ -1,7 +1,4 @@
 #pragma once
-#include<stddef.h>
-#include<malloc.h>
-#include<stdbool.h>
 
 typedef long long int SLL_DataType;
 
@@ -9,7 +6,7 @@ typedef struct Node {
 	SLL_DataType _data;
 	struct Node* _next;
 }Node,SinglyLinkedList;
-
+#ifdef bool
 //链表初始化
 SinglyLinkedList* InitializeSLList();
 //链表获取大小
@@ -28,3 +25,4 @@ bool ForeachSLList(const SinglyLinkedList* list, void(*foreach)(SLL_DataType*));
 bool ClearSLList(SinglyLinkedList* list);
 //链表释放内存
 bool FreeSLList(SinglyLinkedList* list);
+#endif

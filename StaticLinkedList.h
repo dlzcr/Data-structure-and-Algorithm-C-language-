@@ -1,6 +1,4 @@
 #pragma once
-#include<stddef.h>
-#include<stdbool.h>
 
 typedef long long int SSLL_DataType;
 
@@ -14,6 +12,7 @@ typedef struct {
 	size_t _capacity;
 }StaticLinkedList;
 
+#ifdef bool
 //静态链表初始化
 StaticLinkedList* InitializeSSLList(size_t capacity);
 //静态链表获取大小
@@ -32,3 +31,4 @@ bool ForeachSSLList(const StaticLinkedList* list, void(*foreach)(SSLL_DataType*)
 bool ClearSSLList(StaticLinkedList* list);
 //静态链表释放内存
 bool FreeSSLList(StaticLinkedList* list);
+#endif

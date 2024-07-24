@@ -1,9 +1,12 @@
 #include<stdio.h>
+#include<stdbool.h>
+#include<stddef.h>
 #include"SequenceList.h"
 #include"SinglyLinkedList.h"
 #include"StaticLinkedList.h"
 #include"CircularLinkedList.h"
 #include"algorithm.h"
+#include"DoubleLinkList.h"
 
 //顺序表测试
 void SListTest();
@@ -15,12 +18,15 @@ void SSLListTest();
 void algorithmTest();
 //循环链表测试
 void CLListTest();
+//双链表测试
+void DLListTest();
 
 int main(void) {
 	SListTest();
 	SLListTest();
 	SSLListTest();
 	algorithmTest();
+	CLListTest();
 	CLListTest();
 	return 0;
 }
@@ -178,6 +184,49 @@ void algorithmTest(){
 
 void CLListTest()
 {
+	//初始化
+	CircularLinkedList* list = InitializeCLList();
+	//插入0到9
+	for (size_t i = 0; i < 10; ++i)
+		InsertCLList(list, i, i);
+	//第8号位置插入999
+	InsertCLList(list, 8, 999);
+	//打印所有元素
+	for (size_t i = 0; i < SizeCLList(list); ++i)
+		printf("%lld ", *AtCLList(list, i));
+	puts("");
+	//删除第3个位置开始的5个元素
+	for (size_t i = 0; i < 5; ++i)
+		EraseCLList(list, 3);
+	//遍历打印元素
+	ForeachCLList(list, print);
+	puts("");
+	//查找值为999元素
+	printf("%lld", FindCLList(list, 999, equal));
+	puts("");
+	//非法位置操作
+	printf("%d\n", InsertCLList(list, SizeCLList(list) + 1, 999));
+	printf("%d\n", InsertCLList(list, -1, 999));
+	printf("%d\n", EraseCLList(list, SizeCLList(list)));
+	printf("%d\n", EraseCLList(list, -1));
+	printf("%lld\n", FindCLList(list, 7, equal));
+	printf("%p\n", AtCLList(list, SizeCLList(list)));
+	printf("%p\n", AtCLList(list, -1));
+	printf("%d\n", InsertCLList(NULL, 0, 0));
+	printf("%d\n", EraseCLList(NULL, 0));
+	printf("%lld\n", FindCLList(NULL, 0, NULL));
+	printf("%p\n", AtCLList(NULL, 0));
+	ForeachCLList(list, print);
+	puts("");
+	//清空元素
+	ClearCLList(list);
+	ForeachCLList(list, print);
+	puts("");
+	//释放内存
+	FreeCLList(list);
+}
+
+void DLListTest(){
 	//初始化
 	CircularLinkedList* list = InitializeCLList();
 	//插入0到9

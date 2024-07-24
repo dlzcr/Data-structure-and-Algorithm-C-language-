@@ -106,7 +106,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,11 +132,13 @@
   <ItemGroup>
     <ClCompile Include="algorithm.c" />
     <ClCompile Include="CircularLinkedList.c" />
+    <ClCompile Include="DoubleLinkList.c" />
     <ClCompile Include="SinglyLinkedList.c" />
     <ClCompile Include="SequenceList.c" />
     <ClCompile Include="StaticLinkedList.c" />
     <ClInclude Include="algorithm.h" />
     <ClInclude Include="CircularLinkedList.h" />
+    <ClInclude Include="DoubleLinkList.h" />
     <ClInclude Include="StaticLinkedList.h">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
     </ClInclude>

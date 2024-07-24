@@ -1,5 +1,4 @@
 #pragma once
-#include<stdbool.h>
 
 typedef long long int CLL_DataType;
 
@@ -7,7 +6,7 @@ typedef struct CNode {
 	CLL_DataType _data;
 	struct CNode* _next;
 }CNode,CircularLinkedList;
-
+#ifdef bool
 //循环链表初始化
 CircularLinkedList* InitializeCLList();
 //循环链表获取大小
@@ -26,3 +25,4 @@ bool ForeachCLList(const CircularLinkedList* list, void(*foreach)(CLL_DataType*)
 bool ClearCLList(CircularLinkedList* list);
 //循环链表释放内存
 bool FreeCLList(CircularLinkedList* list);
+#endif

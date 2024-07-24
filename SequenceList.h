@@ -1,7 +1,4 @@
 #pragma once
-#include<stdbool.h>
-#include<malloc.h>
-#include<stddef.h>
 
 typedef long long int SL_DataType;
 
@@ -10,7 +7,8 @@ typedef struct {
 	size_t _size;
 	size_t _capacity;
 }SequenceList;
-
+#ifdef NULL
+#ifdef bool
 //顺序表初始化
 SequenceList* InitializeSList(size_t capacity);
 //顺序表获取大小
@@ -35,3 +33,5 @@ inline bool ClearSList(SequenceList* list) {
 }
 //顺序表释放内存
 bool FreeSList(SequenceList* list);
+#endif
+#endif

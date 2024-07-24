@@ -1,6 +1,7 @@
-#include"CircularLinkedList.h"
-#include"malloc.h"
+#include<malloc.h>
 #include <stdint.h>
+#include<stdbool.h>
+#include"CircularLinkedList.h"
 
 //循环链表初始化
 CircularLinkedList* InitializeCLList() {
