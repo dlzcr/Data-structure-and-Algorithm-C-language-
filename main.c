@@ -14,20 +14,20 @@ void SListTest();
 void SLListTest();
 //æ≤Ã¨¡¥±Ì≤‚ ‘
 void SSLListTest();
-//À„∑®≤‚ ‘
-void algorithmTest();
 //—≠ª∑¡¥±Ì≤‚ ‘
 void CLListTest();
 //À´¡¥±Ì≤‚ ‘
 void DLListTest();
+//À„∑®≤‚ ‘
+void algorithmTest();
 
 int main(void) {
 	SListTest();
 	SLListTest();
 	SSLListTest();
+	CLListTest();
+	CLListTest();
 	algorithmTest();
-	CLListTest();
-	CLListTest();
 	return 0;
 }
 
@@ -171,17 +171,6 @@ void SSLListTest() {
 	FreeSSLList(list);
 }
 
-void algorithmTest(){
-	//MidSLList≤‚ ‘
-	SinglyLinkedList* list = InitializeSLList();
-	for (size_t i = 0; i < 11; ++i)
-		InsertSLList(list, i, i);
-	ForeachSLList(list, print);
-	puts("");
-	printf("%lld",*MidSLList(list));
-	puts("\n");
-}
-
 void CLListTest()
 {
 	//≥ı ºªØ
@@ -267,4 +256,17 @@ void DLListTest(){
 	puts("");
 	// Õ∑≈ƒ⁄¥Ê
 	FreeCLList(list);
+}
+
+void algorithmTest() {
+	//MidSLList≤‚ ‘
+	SinglyLinkedList* list = InitializeSLList();
+	for (size_t i = 0; i < 11; ++i)
+		InsertSLList(list, i, i);
+	ForeachSLList(list, print);
+	puts("");
+	printf("%lld", *MidSLList(list));
+	puts("");
+	//Joseph≤‚ ‘
+	Joseph(41);
 }

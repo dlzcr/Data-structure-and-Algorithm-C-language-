@@ -6,6 +6,7 @@ typedef struct CNode {
 	CLL_DataType _data;
 	struct CNode* _next;
 }CNode,CircularLinkedList;
+
 #ifdef bool
 //循环链表初始化
 CircularLinkedList* InitializeCLList();

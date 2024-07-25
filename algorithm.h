@@ -1,3 +1,4 @@
 #pragma once
 //链表操作中间元素
-SSLL_DataType* MidSLList(SinglyLinkedList* list);
+SLL_DataType* MidSLList(SinglyLinkedList* list);
+void Joseph(size_t size);
