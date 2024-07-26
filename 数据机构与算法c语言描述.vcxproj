@@ -133,6 +133,7 @@
     <ClCompile Include="algorithm.c" />
     <ClCompile Include="CircularLinkedList.c" />
     <ClCompile Include="DoubleLinkList.c" />
+    <ClCompile Include="SequenceStack.c" />
     <ClCompile Include="SinglyLinkedList.c" />
     <ClCompile Include="SequenceList.c" />
     <ClCompile Include="StaticLinkedList.c" />
@@ -145,6 +146,7 @@
     <ClInclude Include="SinglyLinkedList.h" />
     <ClCompile Include="main.c" />
     <ClInclude Include="SequenceList.h" />
+    <ClInclude Include="SequenceStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

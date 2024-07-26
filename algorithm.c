@@ -23,7 +23,7 @@ SLL_DataType* MidSLList(SinglyLinkedList* list) {
 }
 
 //约瑟夫问题
-void Joseph(size_t size){
+void Joseph(size_t size,CLL_DataType arr[]) {
 	CircularLinkedList list;
 	list._next = &list;
 
@@ -39,14 +39,44 @@ void Joseph(size_t size){
 		index->_next = newList;
 		index = index->_next;
 	}
+
 	index->_next = list._next;
+
+	unsigned int counst = 0;
 	while (true) {
 		index = index->_next->_next;
 		CNode* to_delete = index->_next;
 		index->_next = to_delete->_next;
-		printf("%lld ", to_delete->_data);
+		arr[counst++] = to_delete->_data;
 		free(to_delete);
 		if (index == to_delete)
 			break;
 	}
+}
+
+//拼接循环链表
+void ConcatenateCLList(CircularLinkedList* list_1, CircularLinkedList* list_2) {
+	//找list_1的尾
+	CNode* list_1_back = list_1;
+	while (list_1_back->_next != list_1)
+		list_1_back = list_1_back->_next;
+	//找list_2的尾
+	CNode* list_2_back = list_2;
+	while (list_2_back->_next != list_2)
+		list_2_back = list_2_back->_next;
+	//连接
+	list_1_back->_next = list_2->_next;
+	list_2_back->_next = list_1;
+}
+
+//判断链表是否有环
+bool is_Circular(SinglyLinkedList* list){
+	Node *fast = list->_next, *slow = list->_next;
+	while(fast) {
+		fast = fast->_next->_next;
+		slow = slow->_next->_next;
+		if (fast == slow)
+			return true;
+	}
+	return false;
 }

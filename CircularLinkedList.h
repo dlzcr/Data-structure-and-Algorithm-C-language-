@@ -9,7 +9,7 @@ typedef struct CNode {
 
 #ifdef bool
 //循环链表初始化
-CircularLinkedList* InitializeCLList();
+CircularLinkedList* InitializeCLList(void);
 //循环链表获取大小
 size_t SizeCLList(const CircularLinkedList* list);
 //循环链表操作元素

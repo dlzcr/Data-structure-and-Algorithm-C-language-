@@ -7,6 +7,7 @@
 #include"CircularLinkedList.h"
 #include"algorithm.h"
 #include"DoubleLinkList.h"
+#include"SequenceStack.h"
 
 //À≥–Ú±Ì≤‚ ‘
 void SListTest();
@@ -20,14 +21,17 @@ void CLListTest();
 void DLListTest();
 //À„∑®≤‚ ‘
 void algorithmTest();
+//’ª≤‚ ‘
+void SStackTest();
 
 int main(void) {
-	SListTest();
-	SLListTest();
-	SSLListTest();
-	CLListTest();
-	CLListTest();
-	algorithmTest();
+	//SListTest();
+	//SLListTest();
+	//SSLListTest();
+	//CLListTest();
+	//CLListTest();
+	//algorithmTest();
+	SStackTest();
 	return 0;
 }
 
@@ -268,5 +272,30 @@ void algorithmTest() {
 	printf("%lld", *MidSLList(list));
 	puts("");
 	//Joseph≤‚ ‘
-	Joseph(41);
+	DLL_DataType arr[41];
+	Joseph(41,arr);
+	for (size_t i = 0; i < 41; ++i)
+		printf("%lld ", arr[i]);
+	puts("");
+	//concatenateCLList≤‚ ‘
+	CircularLinkedList* list1 = InitializeCLList();
+	for (size_t i = 0; i < 10; ++i)
+		InsertCLList(list1, i, i + 1);
+	CircularLinkedList* list2 = InitializeCLList();
+	for (size_t i = 0; i < 10; ++i)
+		InsertCLList(list2, i, i + 11);
+	ConcatenateCLList(list1, list2);
+	puts("");
+	ForeachCLList(list1, print);
+	//≤‚ ‘is_Circualar
+	//¥˝–¥......
+}
+
+void SStackTest(){
+	SequenceStack* stack = InitializeSStack(3);
+	for (size_t i = 0; i < 10; ++i)
+		PushSStack(stack, i);
+	for (size_t i = 0; i < 10; ++i)
+		printf("%lld ",PopStack(stack));
+	FreeSStack(stack);
 }

@@ -36,6 +36,9 @@
     <ClCompile Include="DoubleLinkList.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SequenceStack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SequenceList.h">
@@ -54,6 +57,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="DoubleLinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
