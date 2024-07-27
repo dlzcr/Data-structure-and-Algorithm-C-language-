@@ -133,6 +133,7 @@
     <ClCompile Include="algorithm.c" />
     <ClCompile Include="CircularLinkedList.c" />
     <ClCompile Include="DoubleLinkList.c" />
+    <ClCompile Include="LinkedQueue.c" />
     <ClCompile Include="LinkedStack.c" />
     <ClCompile Include="SequenceStack.c" />
     <ClCompile Include="SinglyLinkedList.c" />
@@ -141,6 +142,7 @@
     <ClInclude Include="algorithm.h" />
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="DoubleLinkList.h" />
+    <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="StaticLinkedList.h">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>

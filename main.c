@@ -9,6 +9,7 @@
 #include"DoubleLinkList.h"
 #include"SequenceStack.h"
 #include"LinkedStack.h"
+#include"LinkedQueue.h"
 
 //À≥–Ú±Ì≤‚ ‘
 void SListTest();
@@ -26,6 +27,8 @@ void algorithmTest();
 void SStackTest();
 //¡¥ Ω’ª≤‚ ‘
 void LStackTest();
+//¡¥ Ω∂”¡–≤‚ ‘
+void LQueueTest();
 
 int main(void) {
 	//SListTest();
@@ -35,7 +38,8 @@ int main(void) {
 	//CLListTest();
 	//algorithmTest();
 	//SStackTest();
-	LStackTest();
+	//LStackTest();
+	LQueueTest();
 	return 0;
 }
 
@@ -316,5 +320,17 @@ void LStackTest(){
 	for (size_t i = 0; i < 10; ++i)
 		printf("%lld ",PopLStack(stack));
 	FreeLStack(stack);
+	puts("");
+}
+
+void LQueueTest(){
+	LinkedQueue* stack = InitializeLQueue(3);
+	for (size_t i = 0; i < 10; ++i)
+		InsertLQueue(stack, i);
+	printf("%lld", SizeLQueue(stack));
+	puts("");
+	for (size_t i = 0; i < 10; ++i)
+		printf("%lld ", DeleteLQueue(stack));
+	FreeLQueue(stack);
 	puts("");
 }
