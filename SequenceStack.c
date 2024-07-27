@@ -26,7 +26,7 @@ bool PushSStack(SequenceStack* stack, SS_DataType value) {
 	*stack->_top++ = value;
 }
 
-SS_DataType PopStack(SequenceStack* stack) {
+SS_DataType PopSStack(SequenceStack* stack) {
 	if (!stack)
 		return INT64_MAX;
 	if (stack->_top == stack->_base)
@@ -40,4 +40,4 @@ bool FreeSStack(SequenceStack* stack) {
 	free(stack->_base);
 	free(stack);
 	return true;
-};
+}

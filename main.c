@@ -8,6 +8,7 @@
 #include"algorithm.h"
 #include"DoubleLinkList.h"
 #include"SequenceStack.h"
+#include"LinkedStack.h"
 
 //À≥–Ú±Ì≤‚ ‘
 void SListTest();
@@ -21,8 +22,10 @@ void CLListTest();
 void DLListTest();
 //À„∑®≤‚ ‘
 void algorithmTest();
-//’ª≤‚ ‘
+//À≥–Ú’ª≤‚ ‘
 void SStackTest();
+//¡¥ Ω’ª≤‚ ‘
+void LStackTest();
 
 int main(void) {
 	//SListTest();
@@ -31,7 +34,8 @@ int main(void) {
 	//CLListTest();
 	//CLListTest();
 	//algorithmTest();
-	SStackTest();
+	//SStackTest();
+	LStackTest();
 	return 0;
 }
 
@@ -295,7 +299,22 @@ void SStackTest(){
 	SequenceStack* stack = InitializeSStack(3);
 	for (size_t i = 0; i < 10; ++i)
 		PushSStack(stack, i);
+	printf("%lld", SizeSStack(stack));
+	puts("");
 	for (size_t i = 0; i < 10; ++i)
-		printf("%lld ",PopStack(stack));
+		printf("%lld ",PopSStack(stack));
 	FreeSStack(stack);
+	puts("");
+}
+
+void LStackTest(){
+	LinkedStack* stack = InitializeLStack(3);
+	for (size_t i = 0; i < 10; ++i)
+		PushLStack(stack, i);
+	printf("%lld", SizeLStack(stack));
+	puts("");
+	for (size_t i = 0; i < 10; ++i)
+		printf("%lld ",PopLStack(stack));
+	FreeLStack(stack);
+	puts("");
 }
